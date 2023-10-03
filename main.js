@@ -13,13 +13,31 @@ function registraComanda()
         let nome = (document.getElementById(("nome").value))
         let tel = parseInt(document.getElementById("tel").value)
         let dtNasc = parseInt(document.getElementById("dtNasc").value)
-        let generoF = Boolean(document.getElementById("generoF")) // tem erro
-        let generoM = Boolean(document.getElementById("generoM")) // tem erro
-        let generoO = Boolean(document.getElementById("generoO")) // tem erro
-        let VIP = Boolean(document.getElementById("VIP"))
+        //var genero = "";
+        //var VIP = "";
+
+        if((document.getElementById("generoF").checked)== true)
+        {
+            var genero = "Feminino"
+        }
+            else if ((document.getElementById("generoM").checked)== true)
+            {
+                var genero = "Masculino"
+            }
+                else if ((document.getElementById("generoO").checked)== true)
+                {
+                    var genero = "Outros"
+                }
+          
+        if( document.getElementById("VIP").checked == true)
+        {
+            var VIP = "VIP Ativo"
+
+        } else { var VIP = "Inativo"}
         
-        console.log(nComanda, Obs, reserva, lugar, nome, tel, dtNasc, generoF,generoM, generoO, VIP)
+        console.log(nComanda, Obs, reserva, lugar, nome, tel, dtNasc, genero, VIP)
    
+
     adicionaLinha('tabelaComandas')
 
 }  
@@ -28,6 +46,7 @@ function registraComanda()
 
 function adicionaLinha(idTab) {
 
+    var VIP;
     var tabela = document.getElementById(idTab);
     var numeroLinhas = tabela.rows.length;
     var linha = tabela.insertRow(numeroLinhas);
@@ -38,7 +57,9 @@ function adicionaLinha(idTab) {
     var celula5 = linha.insertCell(4); 
     var celula6 = linha.insertCell(5); 
     var celula7 = linha.insertCell(6);
-    var celula8 = linha.insertCell(7);  
+    var celula8 = linha.insertCell(7);
+    
+    
     celula1.innerHTML = nComanda.value; 
     celula2.innerHTML =  nome.value.toUpperCase(); 
     celula3.innerHTML =  reserva.value.toUpperCase();
@@ -46,8 +67,7 @@ function adicionaLinha(idTab) {
     celula5.innerHTML =  tel.value.toUpperCase(); 
     celula6.innerHTML =  VIP; //tem erro aqui ainda
     celula7.innerHTML =  Obs.value.toUpperCase();
-
-    celula8.innerHTML =  "<button  onclick='removeLinha(this)'> Ⓧ </button>";
+    celula8.innerHTML =  "<button onclick='removeLinha(this)'> Ⓧ </button>";
 }
 
 
