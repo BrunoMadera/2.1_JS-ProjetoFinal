@@ -78,6 +78,11 @@ function adicionaLinha(idTab) {
     document.getElementById('tabelaComandas').deleteRow(i);
   }   
 
+function irPararegistraComadas(){
+
+    window.location.href = "registraComanda.html"
+    
+}
 
 
 

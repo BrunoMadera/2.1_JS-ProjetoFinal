@@ -1,5 +1,32 @@
-.botao_canc{
+.signin{
 
-    color:red
+    color:white
+
     
     }
+
+.signin_img{
+
+height: 20px;
+
+}
+
+.navfixed{
+
+    background-color: aqua;
+}
+
+.titulo{
+
+    font-size: 150px;
+    color: brown;
+}
+
+/* CSS alterado do Bootstrap */
+
+.bg-darknav{background-color:#023047!important}
+.bg-dark1{background-color:#FB8500!important}
+.bg-light1{background-color: #FFB703!important}
+
+.navbar-brandTitulo{color: #8ECAE6; padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.75rem;text-decoration:none;white-space:nowrap}
+
