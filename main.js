@@ -1,5 +1,5 @@
 
-
+VIP = "";
 
 function registraComanda()
 {
@@ -13,8 +13,7 @@ function registraComanda()
         let nome = (document.getElementById(("nome").value))
         let tel = parseInt(document.getElementById("tel").value)
         let dtNasc = parseInt(document.getElementById("dtNasc").value)
-        //var genero = "";
-        //var VIP = "";
+
 
         if((document.getElementById("generoF").checked)== true)
         {
@@ -31,12 +30,18 @@ function registraComanda()
           
         if( document.getElementById("VIP").checked == true)
         {
-            var VIP = "VIP Ativo"
+            VIP = "VIP Ativo"
 
-        } else { var VIP = "Inativo"}
+        } else { VIP = "VIP Inativo"}
         
         console.log(nComanda, Obs, reserva, lugar, nome, tel, dtNasc, genero, VIP)
    
+
+    if(lugar == "Jardim" && VIP == "VIP Ativo" )
+    {
+        alert("Status de VIP ativo. Ofereça um UPGRADE para area externa!")
+    }
+
 
     adicionaLinha('tabelaComandas')
 
@@ -45,17 +50,11 @@ function registraComanda()
 //Funcao adiciona uma nova linha na tabela
 
 function adicionaLinha(idTab) {
-
-    var VIP;
+   
+    VIP;
     var tabela = document.getElementById(idTab);
     var numeroLinhas = tabela.rows.length;
     var linha = tabela.insertRow(numeroLinhas);
-
-    // for (let i=0; i<8;i++) {
-    
-    // var "celula" + (i+1) = linha.insertCell(i)
-
-    // }
 
     var celula1 = linha.insertCell(0);
     var celula2 = linha.insertCell(1);   
@@ -67,14 +66,15 @@ function adicionaLinha(idTab) {
     var celula8 = linha.insertCell(7);
     
     
-    celula1.innerHTML = nComanda.value; 
+    celula1.innerHTML =  nComanda.value; 
     celula2.innerHTML =  nome.value.toUpperCase(); 
     celula3.innerHTML =  reserva.value.toUpperCase();
     celula4.innerHTML =  lugar.value.toUpperCase();
     celula5.innerHTML =  tel.value.toUpperCase(); 
-    celula6.innerHTML =  VIP; //tem erro aqui ainda
+    celula6.innerHTML =  VIP.toUpperCase();
     celula7.innerHTML =  Obs.value.toUpperCase();
     celula8.innerHTML =  "<button onclick='removeLinha(this)'> Ⓧ </button>";
+
 }
 
 
@@ -90,8 +90,6 @@ function irPararegistraComandas(){
    window.location.href = "registraComanda.html"
 
 }
-
-
 
 
 
