@@ -97,6 +97,32 @@ function irParaHome(){
 
 }
 
+function irParaSenha(){
+
+let User = (document.getElementById("usuario").value);
+let PSW = (document.getElementById("senha").value);
+
+
+
+
+if(User.toUpperCase()=="BRUNO" && PSW == "123")
+{
+    
+    alert("Usuário Registrado. Indo para Tela Inicial...")
+    
+    irParaHome();
+
+    //var Registrado = User.toUpperCase();
+
+} else
+{
+    alert("Usuário Desconhecido\n    Tente novamente...")
+}
+
+//console.log(Registrado);
+
+}
+
 
 
 
