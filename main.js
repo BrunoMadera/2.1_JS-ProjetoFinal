@@ -93,7 +93,7 @@ function irPararegistraComandas(){
 
 function irParaHome(){
 
-   window.location.href = "index.html"
+   window.location.href = "Index.html"
 
 }
 
