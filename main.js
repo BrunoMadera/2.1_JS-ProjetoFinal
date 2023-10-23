@@ -87,9 +87,16 @@ function adicionaLinha(idTab) {
 
 function irPararegistraComandas(){
 
-   window.location.href = "registraComanda.html"
+   window.location.href = "RegComanda.html"
 
 }
+
+function irParaHome(){
+
+   window.location.href = "index.html"
+
+}
+
 
 
 
