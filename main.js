@@ -1,6 +1,31 @@
 
 VIP = "";
 
+// verificando Status do Usuario
+
+var statusUser = localStorage.getItem("registro", statusUser)
+
+console.log("valor storage:"+statusUser)
+console.log("tipo storage:"+ typeof statusUser)
+
+
+    if(statusUser != "DESCONHECIDO")
+        {
+
+        let statusUser = document.getElementById("SigIn");
+
+        statusUser.innerHTML  = statusUser;
+        
+
+        }else
+        {
+                let statusUser = document.getElementById("SigIn")
+                statusUser.innerHTML  = "Desconhecido  Sign-In"
+        }
+
+// final do verificando Status do Usuario
+
+
 function registraComanda()
 {
     
@@ -112,12 +137,26 @@ if(User.toUpperCase()=="BRUNO" && PSW == "123")
     
     irParaHome();
 
-    //var Registrado = User.toUpperCase();
+    let Registrado = User.toUpperCase();
+    Registrado = localStorage.setItem("registro", Registrado);
+    
+       
+
 
 } else
 {
-    alert("Usuário Desconhecido\n    Tente novamente...")
+    alert("Usuário Desconhecido\n    Indo para Tela Inicial...")
+
+    let Registrado = "DESCONHECIDO";
+    Registrado = localStorage.setItem("registro", Registrado);
+
+    irParaHome();
+
 }
+
+    
+    
+
 
 //console.log(Registrado);
 
