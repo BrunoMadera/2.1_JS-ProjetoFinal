@@ -14,6 +14,10 @@ if(statusUser){
     elementoSigin.textContent  = "Sign-In"
 
 }
+
+// final do verificando Status do Usuario
+
+// alterando o nome no elemento SIgIn
    
     const elementoSigin = document.getElementById("SigIn");
 
@@ -28,8 +32,23 @@ if(statusUser){
         elementoSigin.textContent  = "Sign-In"
         }
 
-// final do verificando Status do Usuario
+// final do alterando o nome no elemento SIgIn
 
+// Deslogando com botao
+
+function deslogar()
+{
+    localStorage.removeItem('registro');
+    alert("Usuario desconectado...")
+    irParaHome();
+}
+
+
+// btnSair.addEventListener('click', () => {
+
+//     localStorage.removeItem('registro');
+
+// })
 
 function registraComanda()
 {
