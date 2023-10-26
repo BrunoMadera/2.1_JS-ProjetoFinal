@@ -3,24 +3,29 @@ VIP = "";
 
 // verificando Status do Usuario
 
-var statusUser = localStorage.getItem("registro", statusUser)
+let statusUser = localStorage.getItem("registro")
 
-console.log("valor storage:"+statusUser)
-console.log("tipo storage:"+ typeof statusUser)
+if(statusUser){
 
+    console.log(statusUser)
 
-    if(statusUser != "DESCONHECIDO")
+} else {
+
+    elementoSigin.textContent  = "Sign-In"
+
+}
+   
+    const elementoSigin = document.getElementById("SigIn");
+
+    if(statusUser != "DESCONHECIDO"  )
         {
 
-        let statusUser = document.getElementById("SigIn");
-
-        statusUser.innerHTML  = statusUser;
+        elementoSigin.textContent  = "Bem-Vindo, "+ statusUser;
         
 
         }else
         {
-                let statusUser = document.getElementById("SigIn")
-                statusUser.innerHTML  = "Desconhecido  Sign-In"
+        elementoSigin.textContent  = "Sign-In"
         }
 
 // final do verificando Status do Usuario
