@@ -93,6 +93,7 @@ function registraComanda()
 
 
     adicionaLinha('tabelaComandas')
+    
 
 }  
 
@@ -100,6 +101,10 @@ function registraComanda()
 
 function adicionaLinha(idTab) {
    
+       
+    if(nComanda.value && nome.value && reserva.value && lugar.value && tel.value)
+    {
+
     VIP;
     var tabela = document.getElementById(idTab);
     var numeroLinhas = tabela.rows.length;
@@ -123,6 +128,8 @@ function adicionaLinha(idTab) {
     celula6.innerHTML =  VIP.toUpperCase();
     celula7.innerHTML =  Obs.value.toUpperCase();
     celula8.innerHTML =  "<button onclick='removeLinha(this)'> Ⓧ </button>";
+
+    } else{alert("Revisar e preencher campos obrigatórios...")}
 
 }
 
