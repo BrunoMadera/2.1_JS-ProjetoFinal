@@ -47,7 +47,7 @@
             <a class="nav-link" aria-current="page" href="Index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active " href="#"> Mesas Livres & Ocupadas</a>
+            <a class="nav-link active " href="MesasLayout.html"> Mesas Livres & Ocupadas</a>
           </li>
         </ul>
 
@@ -96,9 +96,7 @@
           <option selected>Escolha da Lista...</option>
           <option>...</option>
           <option>Sem Reserva </option>
-          <option>Reserva 1 </option>
-          <option>Reserva 2 </option>
-          <option>Reserva 3 </option>
+          <option>Com Reserva </option>
         </select>
       </div>
 
@@ -108,9 +106,21 @@
             <option selected>Escolha da Lista...</option>
             <option>...</option>
             <option>Sem Preferência </option>
-            <option>Jardim </option>
-            <option>Salão </option>
-            
+            <option>--Jardim-- </option>
+                        <option>Sofa#1</option>
+                        <option>Sofa#2</option>
+                        <option>Sofa#3</option>
+                        <option>Mesa#1</option>
+                        <option>Mesa#2</option>
+                        <option>Mesa#3</option>
+            <option>--Salão-- </option>
+                        <option>Lounge#1</option>
+                        <option>Lounge#2</option>
+                        <option>Mesa#4</option>
+                        <option>Mesa#5</option>
+                        <option>Mesa#6</option>
+                        <option>Mesa#7</option>
+   
           </select>
         </form> 
         </div>
@@ -171,7 +181,8 @@
     
   
  
-    <button type="button" class="btn btn-info" onclick = registraComanda() > Registrar Comanda </button>
+    <button type="button" class="btn btn-info" id="btnAdicionarComanda" > Registrar Comanda </button>
+    <button type="button" class="btn btn-danger" id="btnLimpaComanda" > Limpar Comanda </button>
 
     <div class="text-success">
       <hr class="border border-primary border-3 opacity-75">     
@@ -185,29 +196,44 @@
   <h3>COMANDAS ATIVAS</h3>
 
 </div>
+<!-- Comandas Ativas -->
+   
+    <!-- <ul class="wrapper">
+    <li class="ComandasAtivas" id="listaComandas"></li>
+    </ul> -->
 
-<table class="table table-striped " id="tabelaComandas">
-  <tr>
-    <td># Comanda</td>
-    <td> Nome </td>
-    <td> Reserva </td>
-    <td> Lugar </td>
-    <td> Telefone </td>
-    <td> VIP status </td>
-    <td> Observações </td>
-    <td> Remover ? </td>
-    <td>  </td>
-  </tr>
-  <caption>Lista de Comandas Ativas</caption>
-</table>        
+        <div class="wrapper1">
+            <div class="TitBox" id=""> # Comandas </div>
+            <div class="TitBox" id=""> Nome </div>
+            <div class="TitBox" id=""> Reserva </div>
+            <div class="TitBox" id=""> Lugar </div>
+            <div class="TitBox" id=""> Telefone </div>
+            <div class="TitBox" id=""> VIP Status </div>
+            <div class="TitBox" id=""> Observações </div>
+        </div>
+        <hr>
+        
+        <div class="wrapper2">
+            <div class="box" id="boxId"></div>
+            <div class="box" id="boxNome"></div>
+            <div class="box" id="boxReserva"></div>
+            <div class="box" id="boxLugar"></div>
+            <div class="box" id="boxTelefone"></div>
+            <div class="box" id="boxVIP"></div>
+            <div class="box" id="boxOBS"></div>
+        </div>
+    </div>
 
+
+
+
+<!-- Fim da Pagina -->
         
 <footer class="pt-3 mt-4 text-muted border-top">
         &copy; Tizer & Madera | 2023
 </footer>
 
-<!-- Fim da Pagina -->
-
 <script src='main.js'></script>
+<script src='mainRegComanda.js'></script>
 </body>
 </html>

@@ -1,7 +1,6 @@
-
-VIP = "";
-
 // verificando Status do Usuario
+
+let elementoSigin
 
 let statusUser = localStorage.getItem("registro")
 
@@ -11,7 +10,7 @@ if(statusUser){
 
 } else {
 
-    elementoSigin.textContent  = "Sign-In"
+   elementoSigin.textContent  = "Sign-In"
 
 }
 
@@ -19,7 +18,7 @@ if(statusUser){
 
 // alterando o nome no elemento SIgIn
    
-    const elementoSigin = document.getElementById("SigIn");
+    let elementoSigin = document.getElementById("SigIn");
 
     if(statusUser != "DESCONHECIDO"  )
         {
@@ -51,106 +50,115 @@ setTimeout(function() {
     }, 1500);
 }
 
-function registraComanda()
-{
+// function registraComanda()
+// {
     
-    //registrando as variaveis digitadas
+//     //registrando as variaveis digitadas
 
-        let nComanda = parseInt(document.getElementById("nComanda").value)
-        let Obs = (document.getElementById("Obs").value)
-        let reserva = parseInt(document.getElementById("reserva").value)
-        let lugar = (document.getElementById("lugar").value)
-        let nome = (document.getElementById(("nome").value))
-        let tel = parseInt(document.getElementById("tel").value)
-        let dtNasc = parseInt(document.getElementById("dtNasc").value)
+//         let nComanda = parseInt(document.getElementById("nComanda").value)
+//         let Obs = (document.getElementById("Obs").value)
+//         let reserva = parseInt(document.getElementById("reserva").value)
+//         let lugar = (document.getElementById("lugar").value)
+//         let nome = (document.getElementById(("nome").value))
+//         let tel = parseInt(document.getElementById("tel").value)
+//         let dtNasc = parseInt(document.getElementById("dtNasc").value)
 
 
-        if((document.getElementById("generoF").checked)== true)
-        {
-            var genero = "Feminino"
-        }
-            else if ((document.getElementById("generoM").checked)== true)
-            {
-                var genero = "Masculino"
-            }
-                else if ((document.getElementById("generoO").checked)== true)
-                {
-                    var genero = "Outros"
-                }
+//         if((document.getElementById("generoF").checked)== true)
+//         {
+//             var genero = "Feminino"
+//         }
+//             else if ((document.getElementById("generoM").checked)== true)
+//             {
+//                 var genero = "Masculino"
+//             }
+//                 else if ((document.getElementById("generoO").checked)== true)
+//                 {
+//                     var genero = "Outros"
+//                 }
           
-        if( document.getElementById("VIP").checked == true)
-        {
-            VIP = "VIP Ativo"
+//         if( document.getElementById("VIP").checked == true)
+//         {
+//             VIP = "VIP Ativo"
 
-        } else { VIP = "VIP Inativo"}
+//         } else { VIP = "VIP Inativo"}
         
-        console.log(nComanda, Obs, reserva, lugar, nome, tel, dtNasc, genero, VIP)
+//         console.log(nComanda, Obs, reserva, lugar, nome, tel, dtNasc, genero, VIP)
    
 
-    if(lugar == "Jardim" && VIP == "VIP Ativo" )
-    {
-        swal({
-        title: "Boa Notícia!!",
-        text: "VIP ativo. Ofereça um UPGRADE para área externa!",
-        icon: "success",
-        });
+//     if(lugar == "Jardim" && VIP == "VIP Ativo" )
+//     {
+//         swal({
+//         title: "Boa Notícia!!",
+//         text: "VIP ativo. Ofereça um UPGRADE para área externa!",
+//         icon: "success",
+//         });
         
-        }
+//         }
 
 
-    adicionaLinha('tabelaComandas')
+//     adicionaLinha('tabelaComandas')
     
 
-}  
+// }  
 
-//Funcao adiciona uma nova linha na tabela
+// //Funcao adiciona uma nova linha na tabela
 
-function adicionaLinha(idTab) {
+// function adicionaLinha(idTab) {
    
        
-    if(nComanda.value && nome.value && reserva.value && lugar.value && tel.value)
-    {
+//     if(nComanda.value && nome.value && reserva.value && lugar.value && tel.value)
+//     {
 
-    VIP;
-    var tabela = document.getElementById(idTab);
-    var numeroLinhas = tabela.rows.length;
-    var linha = tabela.insertRow(numeroLinhas);
+//     VIP;
+//     var tabela = document.getElementById(idTab);
+//     var numeroLinhas = tabela.rows.length;
+//     var linha = tabela.insertRow(numeroLinhas);
 
-    var celula1 = linha.insertCell(0);
-    var celula2 = linha.insertCell(1);   
-    var celula3 = linha.insertCell(2); 
-    var celula4 = linha.insertCell(3); 
-    var celula5 = linha.insertCell(4); 
-    var celula6 = linha.insertCell(5); 
-    var celula7 = linha.insertCell(6);
-    var celula8 = linha.insertCell(7);
+//     var celula1 = linha.insertCell(0);
+//     var celula2 = linha.insertCell(1);   
+//     var celula3 = linha.insertCell(2); 
+//     var celula4 = linha.insertCell(3); 
+//     var celula5 = linha.insertCell(4); 
+//     var celula6 = linha.insertCell(5); 
+//     var celula7 = linha.insertCell(6);
+//     var celula8 = linha.insertCell(7);
     
     
-    celula1.innerHTML =  nComanda.value; 
-    celula2.innerHTML =  nome.value.toUpperCase(); 
-    celula3.innerHTML =  reserva.value.toUpperCase();
-    celula4.innerHTML =  lugar.value.toUpperCase();
-    celula5.innerHTML =  tel.value.toUpperCase(); 
-    celula6.innerHTML =  VIP.toUpperCase();
-    celula7.innerHTML =  Obs.value.toUpperCase();
-    celula8.innerHTML =  "<button class='botao_canc' onclick='removeLinha(this)'> Ⓧ </button>";
+//     celula1.innerHTML =  nComanda.value; 
+//     celula2.innerHTML =  nome.value.toUpperCase(); 
+//     celula3.innerHTML =  reserva.value.toUpperCase();
+//     celula4.innerHTML =  lugar.value.toUpperCase();
+//     celula5.innerHTML =  tel.value.toUpperCase(); 
+//     celula6.innerHTML =  VIP.toUpperCase();
+//     celula7.innerHTML =  Obs.value.toUpperCase();
+//     celula8.innerHTML =  "<button class='botao_canc' onclick='removeLinha(this)'> Ⓧ </button>";
 
-    } else{        
-        swal({
-        title: "Atenção!!",
-        text: "Revisar e preencher campos obrigatórios...",
-        icon: "error",
-            });
+//     } else{        
+//         swal({
+//         title: "Atenção!!",
+//         text: "Revisar e preencher campos obrigatórios...",
+//         icon: "error",
+//             });
 
-}
-}
+// }
 
 
- // funcao remove uma linha da tabela
- function removeLinha(linha) {
-    var i=linha.parentNode.parentNode.rowIndex;
-    document.getElementById('tabelaComandas').deleteRow(i);
-  }   
+
+
+
+// }
+
+
+//  // funcao remove uma linha da tabela
+//  function removeLinha(linha) {
+//     var i=linha.parentNode.parentNode.rowIndex;
+//     document.getElementById('tabelaComandas').deleteRow(i);
+//   }   
+
+
+
+
 
 function irPararegistraComandas(){
 
@@ -161,6 +169,12 @@ function irPararegistraComandas(){
 function irParaHome(){
 
    window.location.href = "Index.html"
+
+}
+
+function irParaMesas(){
+
+   window.location.href = "MesasLayout.html"
 
 }
 

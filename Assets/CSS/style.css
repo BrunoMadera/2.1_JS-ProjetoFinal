@@ -5,6 +5,45 @@
 }
 
 
+.wrapper1{
+
+    display: grid;
+    grid-template-columns: repeat(7, minmax(10px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 15px;
+    margin-bottom: -15px;
+    
+}
+
+    .TitBox{
+
+    display: grid;
+    font-weight: 500;
+    /* border: solid 1px red; */
+    justify-self: center;
+
+    }
+
+.wrapper2{
+   
+    display: grid;
+    grid-template-columns: repeat(7, minmax(10px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 15px;
+    margin-top: -15px;
+    background-color: ;
+
+}
+
+    .box{
+        
+    display: grid;
+    font-weight: 250;
+    /* border: solid 1px red; */
+    justify-self: center;
+
+    }
+
 
 .signin{
 
