@@ -1,0 +1,28 @@
+.container{
+	display: inline-grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+    grid-template-rows: 20% 20% 20% 20% 20% ;
+
+    grid-template-areas: "header content sidenav footer" 
+						 "header content sidenav footer" 
+						 "header content sidenav footer";
+}
+
+.item{
+
+    border: solid 1px black;
+
+}
+
+.header{
+  grid-area: header;
+}
+.sidenav{
+  grid-area: sidenav;
+}
+.content{
+  grid-area: content;
+}
+.footer{
+  grid-area: footer;
+}

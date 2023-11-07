@@ -39,16 +39,17 @@ if(statusUser){
 function deslogar()
 {
     localStorage.removeItem('registro');
-    alert("Usuario desconectado...")
-    irParaHome();
+        swal({
+        title: "Atenção!",
+        text: "Você foi desconectado",
+        icon: "success",
+        button: false,
+        });
+
+setTimeout(function() {
+ irParaHome()  // Código a ser executado após 1 segundo
+    }, 1500);
 }
-
-
-// btnSair.addEventListener('click', () => {
-
-//     localStorage.removeItem('registro');
-
-// })
 
 function registraComanda()
 {
@@ -88,8 +89,13 @@ function registraComanda()
 
     if(lugar == "Jardim" && VIP == "VIP Ativo" )
     {
-        alert("Status de VIP ativo. Ofereça um UPGRADE para area externa!")
-    }
+        swal({
+        title: "Boa Notícia!!",
+        text: "VIP ativo. Ofereça um UPGRADE para área externa!",
+        icon: "success",
+        });
+        
+        }
 
 
     adicionaLinha('tabelaComandas')
@@ -127,12 +133,17 @@ function adicionaLinha(idTab) {
     celula5.innerHTML =  tel.value.toUpperCase(); 
     celula6.innerHTML =  VIP.toUpperCase();
     celula7.innerHTML =  Obs.value.toUpperCase();
-    celula8.innerHTML =  "<button onclick='removeLinha(this)'> Ⓧ </button>";
+    celula8.innerHTML =  "<button class='botao_canc' onclick='removeLinha(this)'> Ⓧ </button>";
 
-    } else{alert("Revisar e preencher campos obrigatórios...")}
+    } else{        
+        swal({
+        title: "Atenção!!",
+        text: "Revisar e preencher campos obrigatórios...",
+        icon: "error",
+            });
 
 }
-
+}
 
 
  // funcao remove uma linha da tabela
@@ -164,9 +175,17 @@ let PSW = (document.getElementById("senha").value);
 if(User.toUpperCase()=="BRUNO" && PSW == "123")
 {
     
-    alert("Usuário Registrado. Indo para Tela Inicial...")
+    swal({
+        title: "Atenção!!",
+        text: "Usuário Registrado. Indo a HOME...",
+        icon: "success",
+        button: false,
+            });
     
-    irParaHome();
+setTimeout(function() {
+ irParaHome()  // Código a ser executado após 1 segundo
+    }, 1500);
+
 
     let Registrado = User.toUpperCase();
     Registrado = localStorage.setItem("registro", Registrado);
@@ -176,20 +195,23 @@ if(User.toUpperCase()=="BRUNO" && PSW == "123")
 
 } else
 {
-    alert("Usuário Desconhecido\n    Indo para Tela Inicial...")
-
-    let Registrado = "DESCONHECIDO";
+    swal({
+        title: "Atenção!!",
+        text: "Usuário desconhecido. Indo a HOME...",
+        icon: "warning",
+         button: false,
+            });
+            
+     let Registrado = "DESCONHECIDO";
     Registrado = localStorage.setItem("registro", Registrado);
 
-    irParaHome();
+   setTimeout(function() {
+ irParaHome()  // Código a ser executado após 1 segundo
+    }, 1500);
 
 }
 
     
-    
-
-
-//console.log(Registrado);
 
 }
 
