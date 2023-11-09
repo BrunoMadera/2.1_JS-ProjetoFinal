@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ptbr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="Assets/Images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="Hugo 0.84.0">
+        <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/style.css'>
+    <title > Pagina Inicial - Controle Mesas</title>
+
+    <!-- CDN SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+<!-- Template FixedBarNav -->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+<body>
+    
+        <!-- Inicio FixedBarNav -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-darknav">
+    <div class="container-fluid">
+      <img img src="Assets/Images/logo-nobg.png" widht="25" height="40"></img>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-3 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " href="RegComanda.html"> Registro Comandas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " href="MesasLayout.html"> Mesas Livres & Ocupadas</a>
+          </li>
+        </ul>
+
+        <div>
+        <img class="signin_img" src="Assets/Images/sign.png" class="rounded float-right" alt="...">
+        <a class="signin" href="SignIn.html" id="SigIn"> Sign-In </a>
+        </div>
+    </div>
+  </nav>
+<!-- Fim FixedBarNav -->
+
+<!-- Inico da Pagina -->
+  <main>
+    <div class="container py-4">
+      <div class="p-5 sm-10 bg-light rounded">
+        <div class="container-fluid">
+          <h1 class="display-4 fw-bold">Bem-Vindo ao Controle de Mesas</h1>
+          <p class="col-md-8 fs-3">Esta é a página inicial para acesso aos sistemas</p>
+          <p class="col-md-8 fs-5">Clique nas seções abaixo para redirecionamento...</p>
+        </div>
+      </div>
+
+      <div class="row align-items-md-stretch">
+        <div class="col-md-50">
+          <div class="h-10 p-5 text-white bg-dark1 rounded-3">
+            <h2>Registro de Comandas</h2>
+            <p>Use esta seção para cadastro de clientes, verificação de reservas, incluir e/ou excluir as comandas já registradas.</p>
+              <button type="button" class="btn btn-light position-relative" onclick="irPararegistraComandas()"> Ir para Seção </button>
+          </div>
+          <br><br>
+        </div>
+        <div class="col-md-50">
+          <div class="h-10 p-5 bg-light1 border rounded-3">
+            <h2>Situação de Mesas Livres & Ocupadas</h2>
+            <p>Use esta seção para visualizar as mesas ocupadas e livres .</p>
+              <button type="button" class="btn btn-light position-relative" onclick="irParaMesas()"> Ir para Seção </button>
+          </div>
+        </div>
+      </div>
+
+      <footer class="pt-3 mt-4 text-muted border-top">
+        &copy; Tizer & Madera | 2023
+      </footer>
+    </div>
+  </main>
+<!-- Fim da Pagina -->
+
+<script src='main.js'></script>
+</body>
+</html>

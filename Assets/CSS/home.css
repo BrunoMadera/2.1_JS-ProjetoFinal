@@ -1,0 +1,238 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Inicio da Pagina Index */
+
+.containerHome{
+    display: grid;
+    /* border: solid 1px red; */
+    align-items: center;
+}
+
+.boxHome{
+    display: grid;
+
+    /* border: solid 1px red; */
+
+    margin-left: 125px;
+    margin-right: 125px;
+    margin-top: 40px;
+}
+
+.RegComanda{
+
+background-color: #FB8500;
+border-radius: 10px;
+padding: 15px;
+}
+
+.Mesas{
+
+background-color: #FFB703;
+border-radius: 10px;
+padding: 15px;
+}
+
+
+.button{
+    max-width: fit-content;
+    border-radius: 5px;
+    margin-left: 30px;
+    padding:5px;
+    border: outset;
+
+}
+
+.nav{
+
+    display: grid;
+    margin: 0px;
+    padding: 5px;
+    background-color: #023047;
+    grid-template-columns: repeat(2, 5%) 15% auto 10% 5%;
+    grid-template-rows: 50px;
+    grid-template-areas: 
+    "logo home comandas mesas signin ico";
+}
+
+.txtNav{
+
+    display: grid;
+    /* border: solid 1px red; */
+    background-color: #023047;
+    Color: white;
+    place-self: center stretch;
+    margin: 5px;
+    text-decoration: none;
+    }
+
+.pos1{
+    display: grid;
+    grid-area: logo;
+    max-width: 70%;
+
+}
+
+.pos2{
+    display: grid;
+    grid-area: home ;
+}
+
+.pos3{
+    display: grid;
+    grid-area: comandas ;
+}
+
+.pos4{
+    display: grid;
+    grid-area: mesas ;
+}
+
+.pos5{
+    display: grid;
+    grid-area: signin ;
+    color: white;
+    justify-self: end;
+    
+}
+
+.pos6{
+    display: grid;
+    grid-area: ico ;
+    max-width: 20px;
+    max-height: 20px;
+   
+}
+
+
+.Tit1{
+    font-size: 35px;
+            font-weight: 600;
+
+}
+
+
+.Tit2{
+    font-size: 20px;
+        font-weight: 500;
+
+}
+
+
+.Tit3{
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px;;
+
+}
+
+.Tit4{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px;
+
+
+}
+
+/* Inicio da Pagina Comandas */
+
+.ContainerComanda{
+
+    display: grid;
+    /* border: solid 1px red; */
+    grid-template-columns: auto 22% 22% 40%;
+    grid-template-rows: 1fr 2fr ;
+    background-color: #FFC300;
+    margin-top: 10px;
+    gap:2px;
+ 
+
+    grid-template-areas: 
+    
+    "name name name name"
+    "i1 i3 i4 i2"
+    ;
+
+}
+
+.boxComandas{
+    display: grid;
+    color: #003566;
+    /* border: solid 1px red; */
+    /* background-color: yellow; */
+    
+}
+
+
+.item0{
+        /* border: solid 1px red; */
+        grid-area: name;
+            color: #001D3D;
+ 
+
+}
+.item1{
+        /* border: solid 1px red; */
+        grid-area: i1;
+
+        }
+.item2{
+        /* border: solid 1px red; */
+        grid-area: i2;
+
+}
+.item3{
+        /* border: solid 1px red; */
+        grid-area: i3;
+
+}
+.item4{
+        /* border: solid 1px red; */
+        grid-area: i4;
+
+
+}
+
+
+
+.select{
+
+    border-radius: 5px;
+    box-shadow: 4px 4px #001D3D;
+    width: 100%;
+    height: 30px;
+    padding: 2px;
+ 
+}
+
+.input{
+
+    border-radius: 5px;
+    box-shadow: 4px 4px #001D3D;
+    width: 100%;
+    height: 30px;
+    padding: 2px;
+ 
+}
+
+.horizLineBlue{
+
+    border: solid 2px #003566;
+    opacity : 0.75;
+
+}
+
+.horizLineRed{
+
+    border: solid 2px orangered;
+    opacity : 0.5;
+
+}
+
+
+
+/*  */
+

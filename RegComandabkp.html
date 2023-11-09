@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="Assets/Images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="Hugo 0.84.0">
+    <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/style.css'>
+    <title > Registro de Comandas</title>
+
+    <!-- CDN SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+<!-- Template FixedBarNav -->
+ <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+<body>
+    
+    <!-- Inicio FixedBarNav -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-darknav">
+    <div class="container-fluid">
+     <img img src="Assets/Images/logo-nobg.png" widht="25" height="40"></img>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-3 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " href="MesasLayout.html"> Mesas Livres & Ocupadas</a>
+          </li>
+        </ul>
+
+        <div>
+        <img class="signin_img" src="Assets/Images/sign.png" class="rounded float-right" alt="...">
+        <a class="signin" href="SignIn.html" id="SigIn"> Sign-In </a> <!--Sign-In --> 
+        </div>
+    </div>
+  </nav>
+<!-- Fim FixedBarNav -->
+
+<!-- Inico da Pagina -->
+  
+
+  <div class="text-success">
+    <hr class="border border-danger border-15">     
+  </div>
+
+<br>
+<div class="text-success">
+      <hr class="border border-danger border-3 opacity-75">     
+    </div>
+    
+    <h3> Dados para Comanda</h3>
+
+    <div class="text-success">
+      <hr class="border  border-1 opacity-75">     
+    </div>
+      
+    
+    <form class="row g-3">
+      <div class="col-sm-1">
+        <label for="number" class="form-label"># Comanda</label> 
+        <input  type="number" class="form-control" id="nComanda">
+      </div>
+<br>
+      <div class="col-md-10">
+        <label for="text" class="form-label">Observações para Comanda</label>
+        <input type="text" class="form-control" id="Obs">
+      <br>
+
+      <form class="row row-cols-lg-auto g-3 align-items-center">
+        <div class="row-lg-5">
+        <label for="inputState" class="form-label">Reserva Realizada?...</label>
+        <select id="reserva" class="form-select">
+          <option selected>Escolha da Lista...</option>
+          <option>...</option>
+          <option>Sem Reserva </option>
+          <option>Com Reserva </option>
+        </select>
+      </div>
+
+        <div class="row-cols-lg-auto">
+          <label for="inputState" class="form-label">Lugar Escolhido......... </label>
+          <select id="lugar" class="form-select">
+            <option selected>Escolha da Lista...</option>
+            <option>...</option>
+            <option>Sem Preferência </option>
+            <option>--Jardim-- </option>
+                        <option>Sofa#1</option>
+                        <option>Sofa#2</option>
+                        <option>Sofa#3</option>
+                        <option>Mesa#1</option>
+                        <option>Mesa#2</option>
+                        <option>Mesa#3</option>
+            <option>--Salão-- </option>
+                        <option>Lounge#1</option>
+                        <option>Lounge#2</option>
+                        <option>Mesa#4</option>
+                        <option>Mesa#5</option>
+                        <option>Mesa#6</option>
+                        <option>Mesa#7</option>
+   
+          </select>
+        </form> 
+        </div>
+      </div>
+               
+      <br>
+      
+      <div class="text-success">
+        <hr class="border border-primary border-3 opacity-50">     
+      </div>
+      
+      <h3>Dados do Cliente</h3>
+  
+      <div class="text-success">
+        <hr class="border border-primary border-3 opacity-50">     
+      </div>
+
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Nome" aria-label="Nome" id="nome">
+        <span class="input-group-text">Nome </span>
+        <input type="number" class="form-control" placeholder="Telefone" aria-label="Telefone"id="tel">
+        <span class="input-group-text">Data Nascimento </span>
+        <input type="date" class="form-control" placeholder="Data Nascimento" aria-label="Data Nascimento" id="dtNasc">
+
+      </div>
+
+ 
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="generoF">
+          <label class="form-check-label" for="flexRadioDefault1" >
+            Feminino
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="generoM">
+          <label class="form-check-label" for="flexRadioDefault2" >
+            Masculino
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="generoO" checked>
+          <label class="form-check-label" for="flexRadioDefault3" >
+            Outro
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <input class="form-check-input" type="checkbox" id="VIP" checked>
+          <label class="form-check-label" for="gridCheck">
+            Status de VIP !!
+        </label>
+        </div>
+        </div>
+        </div>
+
+
+      </div>
+    
+    
+  
+ 
+    <button type="button" class="btn btn-info" id="btnAdicionarComanda" > Registrar Comanda </button>
+    <button type="button" class="btn btn-danger" id="btnLimpaComanda" > Limpar Comanda </button>
+
+    <div class="text-success">
+      <hr class="border border-primary border-3 opacity-75">     
+    </div>
+
+    </div>
+    <div class="text-success">
+      <hr class="border border-primary border-3 opacity-75">     
+    </div>
+
+  <h3>COMANDAS ATIVAS</h3>
+
+</div>
+<!-- Comandas Ativas -->
+   
+    <!-- <ul class="wrapper">
+    <li class="ComandasAtivas" id="listaComandas"></li>
+    </ul> -->
+
+        <div class="wrapper1">
+            <div class="TitBox" id=""> # Comandas </div>
+            <div class="TitBox" id=""> Nome </div>
+            <div class="TitBox" id=""> Reserva </div>
+            <div class="TitBox" id=""> Lugar </div>
+            <div class="TitBox" id=""> Telefone </div>
+            <div class="TitBox" id=""> VIP Status </div>
+            <div class="TitBox" id=""> Observações </div>
+        </div>
+        <hr>
+        
+        <div class="wrapper2">
+            <div class="box" id="boxId"></div>
+            <div class="box" id="boxNome"></div>
+            <div class="box" id="boxReserva"></div>
+            <div class="box" id="boxLugar"></div>
+            <div class="box" id="boxTelefone"></div>
+            <div class="box" id="boxVIP"></div>
+            <div class="box" id="boxOBS"></div>
+        </div>
+    </div>
+
+
+
+
+<!-- Fim da Pagina -->
+        
+<footer class="pt-3 mt-4 text-muted border-top">
+        &copy; Tizer & Madera | 2023
+</footer>
+
+<script src='main.js'></script>
+<script src='mainRegComanda.js'></script>
+</body>
+</html>

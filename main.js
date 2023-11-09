@@ -1,20 +1,3 @@
-// verificando Status do Usuario
-
-let elementoSigin
-
-let statusUser = localStorage.getItem("registro")
-
-if(statusUser){
-
-    console.log(statusUser)
-
-} else {
-
-   elementoSigin.textContent  = "Sign-In"
-
-}
-
-// final do verificando Status do Usuario
 
 // alterando o nome no elemento SIgIn
    
@@ -31,7 +14,17 @@ if(statusUser){
         elementoSigin.textContent  = "Sign-In"
         }
 
-// final do alterando o nome no elemento SIgIn
+// final do alterando o nome no elemento Signin
+
+// verificando Status do Usuario
+
+//let elementoSigin
+
+let statusUser = localStorage.getItem("registro")
+
+if(statusUser){console.log(statusUser)} else {elementoSigin.textContent  = "Sign-In"}
+
+// final do verificando Status do Usuario
 
 // Deslogando com botao
 

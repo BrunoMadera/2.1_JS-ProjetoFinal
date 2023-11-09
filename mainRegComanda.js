@@ -72,7 +72,7 @@ function mostraComandas(mostraTodos = true) {
 
         })}
     
-         // }else {
+    // }else {
 
     //         const ultimaComanda = comandas[comandas.lenght - 1];
 
