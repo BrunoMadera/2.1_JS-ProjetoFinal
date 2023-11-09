@@ -31,16 +31,15 @@
 
 
 
-<hr class="horizLineBlue" style="margin-top: 5px;">
-<hr class="horizLineRed" style="margin-bottom: 5px;">
+<hr class="horizLineBlue">
 
 <div class="ContainerComanda">
 
-    <div class="boxComandas item0 Tit1">Dados para Comandas
+    <div class="boxComandas item0 Tit1" style="">Dados para Comandas
     </div>
 
     <div class="boxComandas item1 Tit4"> ID# 
-        <input class="input" type="number" placeholder="nº Comanda" id="nComanda"> </input>
+        <input class="input" type="number" placeholder="nº Comanda" id="nComanda" pattern="pattern="[0-9]{4}" required> </input>
     </div>
 
     <div class="boxComandas item2 Tit4" > Observações
@@ -81,62 +80,75 @@
 </div>
 
 
-<hr class="horizLineBlue" style="margin-top: 5px;">
-<hr class="horizLineRed" style="margin-bottom: 5px;">
+<hr class="horizLineRed">
 <br>
 
-<div>Dados dos Clientes <br><br>
 
-<input type="text" placeholder="Nome" id="nome">nome </input>
-<input type="number" placeholder="Telefone" id="tel">telefone </input>
-<input type="checkbox" id="VIP"> </input>
-<label for="VIP">status de vip</label>
+<div class="ContainerCliente">
 
-<button id="btnAdicionarComanda">registrar comanda</button>
-<button id="btnLimpaComanda">apagar comanda</button>
+    <div class="boxCliente cli0 Tit1" style="">Dados dos Clientes
+    </div>
+
+    <div class="boxCliente cli1 Tit4"> Nome 
+        <input class="input" type="text" placeholder="Nome Social" id="nome"> </input>
+    </div>
+
+    <div class="boxCliente cli2 Tit4"> Telefone 
+        <input class="input" type="tel" placeholder="(DD) XXXXX-YYYY" pattern="([0-9]{2}) [0-9]{5}-[0-9]{4}" id="tel" required> </input>
+    </div>
+
+    <div class="boxCliente cli3 Tit4"> Status VIP
+        <input class="checkbox" type="checkbox" id="VIP"></input>
+    </div>
+
+     <div>
+        <button class="boxCliente cli4 Tit4 buttonA" id="btnAdicionarComanda">registrar comanda</button>
+        <button class="boxCliente cli5 Tit4 buttonB" id="btnLimpaComanda">apagar comanda</button>
+    </div>
 
 </div>
 
 
+<hr class="horizLineBlue">
+<br>
 
-<br><br><br><br>    <hr><hr><hr>
 
-<h3>COMANDAS ATIVAS</h3>
+<div class="ContainerAtivas">
 
-<!-- Comandas Ativas -->
-   
-    <!-- <ul class="wrapper">
-    <li class="ComandasAtivas" id="listaComandas"></li>
-    </ul> -->
-
-        <div class="wrapper1">
-            <div class="TitBox" id=""> # Comandas </div>
-            <div class="TitBox" id=""> Nome </div>
-            <div class="TitBox" id=""> Reserva </div>
-            <div class="TitBox" id=""> Lugar </div>
-            <div class="TitBox" id=""> Telefone </div>
-            <div class="TitBox" id=""> VIP Status </div>
-            <div class="TitBox" id=""> Observações </div>
-        </div>
-        <hr>
-        
-        <div class="wrapper2">
-            <div class="boxAtivas" id="boxId"></div>
-            <div class="boxAtivas" id="boxNome"></div>
-            <div class="boxAtivas" id="boxReserva"></div>
-            <div class="boxAtivas" id="boxLugar"></div>
-            <div class="boxAtivas" id="boxTelefone"></div>
-            <div class="boxAtivas" id="boxVIP"></div>
-            <div class="boxAtivas" id="boxOBS"></div>
-        </div>
+    <div class="boxAtivas ativa0 Tit1" style="">Comandas Ativas
     </div>
 
-<!-- Fim da Pagina -->
+        <a class="">
+            <a class="boxAtivas ativa1" id=""> # Comandas </a>
+            <a class="boxAtivas ativa2" id=""> Nome </a>
+            <a class="boxAtivas ativa3" id=""> Reserva </a>
+            <a class="boxAtivas ativa4" id=""> Lugar </a>
+            <a class="boxAtivas ativa5" id=""> Telefone </a>
+            <a class="boxAtivas ativa6" id=""> VIP Status </a>
+            <a class="boxAtivas ativa7" id=""> Observações </a>
+        </a>
+</div>
+
+<div class="ContainerDados">
+        <a class="">
+            <a class="boxDados ativa8" id="boxId"></a>
+            <a class="boxDados ativa9" id="boxNome"></a>
+            <a class="boxDados ativa10" id="boxReserva"></a>
+            <a class="boxDados ativa11" id="boxLugar"></a>
+            <a class="boxDados ativa12" id="boxTelefone"></a>
+            <a class="boxDados ativa13" id="boxVIP"></a>
+            <a class="boxDados ativa14" id="boxOBS"></a>
+        </a>
+</div>
+<br>
+<hr class="horizLineNavyBlue">
+ 
+ <!-- Fim da Pagina -->
 
     <footer class="box "> &copy; Tizer & Madera | 2023</footer>
 </div>
 
 </body>
 <!-- Scripts -->
-    <script src='mainRegComanda.js'></script>
+    <script src='RegComanda.js'></script>
 </html>

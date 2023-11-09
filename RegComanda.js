@@ -115,6 +115,8 @@ function mostraComandas(mostraTodos = true) {
 
 btnAdicionarComanda.addEventListener('click', (event) => {
     event.preventDefault()
+
+    if( document.getElementById("VIP").checked === true) {VIP = "VIP Ativo"} else { VIP = "VIP Inativo"}
     
     comandas.push({
         nComanda: nComanda.value,
@@ -134,12 +136,11 @@ btnAdicionarComanda.addEventListener('click', (event) => {
             text: "Nova Entrada registrada",
             icon: "success",
             button: false,
-                });
+            });
         
     setTimeout(function() {
             location.reload();  
             }, 750);
-
 }
 )
 

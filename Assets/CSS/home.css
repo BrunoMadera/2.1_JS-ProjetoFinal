@@ -46,6 +46,25 @@ padding: 15px;
 
 }
 
+.buttonA{
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 30px;
+    padding:5px;
+    border: outset 4px #FFB703;
+    background-color: #FB8500;
+    color: white;
+}
+
+.buttonB{
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 30px;
+    padding:5px;
+    border: outset 4px red;
+    background-color: rgba(255, 0, 0, 0.5);
+ }
+
 .nav{
 
     display: grid;
@@ -170,7 +189,7 @@ padding: 15px;
 .item0{
         /* border: solid 1px red; */
         grid-area: name;
-            color: #001D3D;
+            color: #003566;
  
 
 }
@@ -218,10 +237,30 @@ padding: 15px;
  
 }
 
+.checkbox{
+
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    padding: 2px;
+
+}
+
+.horizLineNavyBlue{
+
+    border: solid 3px #001D3D;
+    opacity : 1;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+
 .horizLineBlue{
 
     border: solid 2px #003566;
     opacity : 0.75;
+    margin-top: 5px;
 
 }
 
@@ -229,10 +268,207 @@ padding: 15px;
 
     border: solid 2px orangered;
     opacity : 0.5;
+    margin-top: 5px
 
+}
+
+.ContainerCliente{
+
+    display: grid;
+/* border: solid 1px red; */
+    background-color: #003566;
+    color: white;
+    grid-template-columns: 35% 25% 15% auto;
+    grid-template-rows: 1fr 2fr auto ;
+
+
+    grid-template-areas: 
+    "cli0 cli0 cli0 cli0"
+    "cli1 cli2 cli3 cli4"
+    "cli1 cli2 cli3 cli5";
+
+}
+
+.boxCliente{
+    display: grid;
+/* border: solid 1px red; */
+    color: white
+    
+}
+
+.cli0{
+        /* border: solid 1px red; */
+        grid-area: cli0;
+        align-self: center;
+
+
+}
+
+.cli1{
+        /* border: solid 1px red; */
+        grid-area: cli1;
+        align-self: center;
+
+
+}
+.cli2{
+        /* border: solid 1px red; */
+        grid-area: cli2;
+        align-self: center;
+
+
+}
+
+.cli3{
+        /* border: solid 1px red; */
+        grid-area: cli3;
+        place-self: center;
+        align-self: center;
+
+}
+
+.cli4{
+        /* border: solid 1px red; */
+        grid-area: cli2;
+        justify-self: end;
+
+}
+
+.cli5{
+        /* border: solid 1px red; */
+        grid-area: cli2;
+        justify-self: end;
+
+}
+
+.ContainerAtivas{
+
+    display: grid;
+    background-color: whitesmoke;
+    color: black; 
+    grid-template-columns: 10% 10% 10% 10% 10% 10% auto;
+    grid-template-rows: repeat(2, auto); 
+
+
+    grid-template-areas: 
+    "ativa0 ativa0 ativa0 ativa0 ativa0 ativa0 ativa0"
+    "ativa1 ativa2 ativa3 ativa4 ativa5 ativa6 ativa7";
+
+}
+
+.boxAtivas{
+    align-self: center;
+    place-self: center stretch;
+    
+}
+
+.ativa0{
+        grid-area: ativa0;
+        justify-self: start;
+        font-weight: ;
+        
+}
+
+.ativa1{
+
+        grid-area: ativa1;
+        border-bottom: solid 1px black;
+        font-size: large;
+}
+.ativa2{
+
+        grid-area: ativa2;
+        border-bottom: solid 1px black;
+        font-size: large;
+}
+.ativa3{
+        
+        grid-area: ativa3;
+        border-bottom: solid 1px black;
+        font-size: large;
+}
+.ativa4{
+        
+        grid-area: ativa4;
+        border-bottom: solid 1px black;
+        font-size: large;
+}
+.ativa5{
+       
+        grid-area: ativa5;
+        border-bottom: solid 1px black;
+        font-size: large;
+}
+.ativa6{
+            
+        grid-area: ativa6;
+        border-bottom: solid 1px black;
+        font-size: large;
+}
+.ativa7{
+        
+        grid-area: ativa7;
+        border-bottom: solid 1px black;
+        font-size: large;
+
+        
 }
 
 
 
-/*  */
+.ContainerDados{
 
+    display: grid;
+    background-color: whitesmoke;
+    color: black; 
+    grid-template-columns: 10% 10% 10% 10% 10% 10% auto;
+    grid-template-rows: repeat(1, auto); 
+
+
+    grid-template-areas: 
+    "ativa8 ativa9 ativa10 ativa11 ativa12 ativa13 ativa14";
+
+}
+
+.boxDados{
+    align-self: center;
+    place-self: stretch;
+    background-color:lightgray;
+   
+}
+
+.ativa8{
+
+        grid-area: ativa8;
+        border-bottom: solid 1px black;
+}
+.ativa9{
+
+        grid-area: ativa9;
+        border-bottom: solid 1px black;
+}
+.ativa10{
+        
+        grid-area: ativa10;
+        border-bottom: solid 1px black;
+}
+.ativa11{
+        
+        grid-area: ativa11;
+        border-bottom: solid 1px black;
+}
+.ativa12{
+       
+        grid-area: ativa12;
+        border-bottom: solid 1px black;
+}
+.ativa13{
+            
+        grid-area: ativa13;
+        border-bottom: solid 1px black;
+}
+.ativa14{
+        
+        grid-area: ativa14;
+        border-bottom: solid 1px black;
+}
