@@ -3,10 +3,10 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Registro de Comandas</title>
+    <title>Registro de Usuário</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 <!-- Estilos -->
-    <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/home.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/style.css'>
     
 <!-- CDN SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -17,12 +17,12 @@
 <div class="">
      <div class="box nav"> <!--barra superior -->
         <a class="txtNav pos1" href="index.html" >
-            <img class="txtNav pos1" src="Assets/Images/logo-nobg.png" ></img>  
+            <img class="txtNav pos1" src="Assets/Images/logo-nobg.png"></img>  
         </a>
         <a class="txtNav pos2"class="txtNav pos2" href="index.html">Home</a>   
         <a class="txtNav pos3" href="regComanda.html" >Controle de Comandas</a>   
         <a class="txtNav pos4" href="mesasLayout.html">Mesas Ocupadas&Livres</a>   
-        <a class="txtNav pos5" href="signIn.html">Sign-In</a>
+        <a class="txtNav pos5" href="signIn.html" id="SigIn">Sign-In</a>
         <img class="txtNav pos6" src="Assets/Images/sign.png" alt=""></img>
     </div>
 </div>
@@ -32,38 +32,46 @@
 
 <!-- Inicio da Pagina -->
 
-<form>
-    <img class="logotipo" src="Assets/Images/logo.png" alt="">
-    <h1 class="">Acessando o Sistema...</h1>
+<div class="containerSignIn">
 
-    <div class="">
-      <input type="text" class="" id="usuario" placeholder="name">
-      <label for="usuario">Seu nome de usuário</label>
-    </div>
-    <div class="">
-      <input type="password" class="" id="senha" placeholder="Password">
-      <label for="senha">Senha</label>
-      <br>
+    <div class="log0">
+        <img class="logotipo" src="Assets/Images/logo-nobg.png" alt=""></img>
+   </div>
+
+    <div class="log5">
+        <span class="Tit4">Acessando o Sistema...</span>
     </div>
 
-    <button class="" type="button" >Entrar</button>
-<br><br> 
-    <button class="" type="button" >Sair </button>
+    <div class="log1">
+        <p class="">  
+            <input class="inputA" type="text" placeholder="Digite seu Usuário..." id="usuario"> </input>
+        </p>
+    </div>
 
-  </form>
+    <div class="log2">
+        <p class="">  
+            <input class="inputA" type="text" placeholder="Digite sua Senha..." id="senha"> </input>
+        </p>
+    </div>
+    
+    <div class="log3">
+         <span class="">
+            <button class="buttonD" onclick=irParaSenha() id="usuario">Entrar</button>
+            <button class="buttonC" onclick=deslogar() id="senha">Sair</button>
+        </span>
+    </div>
+
+</div>
 
 
 
 
-
- 
  <!-- Fim da Pagina -->
 <hr class="horizLineNavyBlue">
 
     <footer class="box"> &copy; Tizer & Madera | 2023</footer>
-</div>
 
 </body>
 <!-- Scripts -->
-    <script src='xxx.js'></script>
+    <script src='main.js'></script>
 </html>

@@ -6,7 +6,7 @@
     <title>Pagina Inicial - Controle Mesas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 <!-- Estilos -->
-    <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/home.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Assets/CSS/style.css'>
 <!-- CDN SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
@@ -21,7 +21,7 @@
         <a class="txtNav pos2"class="txtNav pos2" href="#" style="color: grey;">Home</a>   
         <a class="txtNav pos3" href="regComanda.html">Controle de Comandas</a>   
         <a class="txtNav pos4" href="mesasLayout.html">Mesas Ocupadas&Livres</a>   
-        <a class="txtNav pos5" href="signIn.html">Sign-In</a>
+        <a class="txtNav pos5" href="signIn.html" id="SigIn">Sign-In</a>
         <img class="txtNav pos6" src="Assets/Images/sign.png" alt=""></img>
     </div>
     
@@ -34,11 +34,11 @@
     
     <div class="boxHome RegComanda Tit2" style="color: white;">Registro de Comandas
             <p class="Tit3">Use esta seção para cadastro de clientes, verificação de reservas, incluir e/ou excluir as comandas já registradas.</p>
-            <button type="button" class="button" id="btnIrRegistra"> Ir para Seção </button>
+            <button type="button" class="button" onclick=irPararegistraComandas()> Ir para Seção </button>
     </div>
     <div class="boxHome Mesas Tit2">Situação de Mesas Livres & Ocupadas
             <p class="Tit3">Use esta seção para visualizar as mesas ocupadas e livres .</p>
-            <button type="button" class="button" id="btnIrMesa"> Ir para Seção </button>
+            <button type="button" class="button" onclick=irParaMesas()> Ir para Seção </button>
 
     </div>
 
@@ -49,7 +49,6 @@
 </div>
 
 </body>
-
 <!-- Scripts -->
-    <script src='index.js'></script>
+    <script src='main.js'></script>
 </html>
