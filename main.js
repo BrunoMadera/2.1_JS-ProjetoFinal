@@ -115,6 +115,7 @@ setTimeout(function() {
 //elementos
 
 let comandas = [];
+
 const nComanda = document.getElementById("nComanda");
 const id = document.getElementById("nComanda");
 const nome = document.getElementById("nome")
@@ -122,6 +123,7 @@ const reserva = document.getElementById("reserva")
 const lugar = document.getElementById("lugar")
 const tel = document.getElementById("tel")
 const obs = document.getElementById("Obs")
+
 
 let VIP = "";
 if( document.getElementById("VIP").checked === true) {VIP = "VIP Ativo"} else { VIP = "VIP Inativo"}
@@ -202,9 +204,7 @@ btnAdicionarComanda.addEventListener('click', () => {
         obs : obs.value,
     })
 
-   
       localStorage.setItem('comandas', JSON.stringify(comandas))
-
 
     swal({
             title: "Sucesso!!",
@@ -217,6 +217,15 @@ btnAdicionarComanda.addEventListener('click', () => {
             location.reload();  
             }, 750);
 //} // if do campo em branco
+
+//registrando mesas ocupadas em outro Array
+
+    let ocupadasLS = JSON.parse(localStorage.getItem('ocupadas')) || []
+
+    ocupadasLS.push((lugar.value))
+
+    localStorage.setItem('ocupadas', JSON.stringify(ocupadasLS))
+
 
 }
 )
@@ -276,5 +285,28 @@ btnLimpaUltima.addEventListener('click', () => {
 }
 )
 
+function verificaMesas(){
 
+    let ocupadasLS = JSON.parse(localStorage.getItem('ocupadas')) || []
 
+    var IsSF1_occupied = ocupadasLS.find((i) => i === "Sofa#1");
+    console.log(IsSF1_occupied);
+
+    var IsSF2_occupied = ocupadasLS.find((i) => i === "Sofa#2");
+    console.log(IsSF2_occupied);
+
+    var IsSF3_occupied = ocupadasLS.find((i) => i === "Sofa#3");
+    console.log(IsSF3_occupied);
+
+    var IsM1_occupied = ocupadasLS.find((i) => i === "Mesa#1");
+    console.log(IsM1_occupied);
+
+    var IsM2_occupied = ocupadasLS.find((i) => i === "Mesa#2");
+    console.log(IsM2_occupied);
+
+    var IsM3_occupied = ocupadasLS.find((i) => i === "Mesa#3");
+    console.log(IsM3_occupied);
+
+}
+
+verificaMesas();
