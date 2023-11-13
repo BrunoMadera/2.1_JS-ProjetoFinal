@@ -129,7 +129,7 @@ if( document.getElementById("VIP").checked === true) {VIP = "VIP Ativo"} else { 
 
 // array de comandas
 
-let comandasLS = JSON.parse(localStorage.getItem('comandas'))
+let comandasLS = JSON.parse(localStorage.getItem('comandas'));
 
 if (Array.isArray(comandasLS) && comandasLS.length > 0) {
     comandas.push(...comandasLS)
@@ -263,6 +263,7 @@ btnLimpaComanda.addEventListener('click', (event) => {
     
     localStorage.removeItem('comandas')
 
+
     swal({
             title: "Atenção!!",
             text: "Entradas apagadas!",
@@ -276,3 +277,41 @@ btnLimpaComanda.addEventListener('click', (event) => {
 
     }
     )
+
+  
+//     btnLimpaUltimoRegistro.addEventListener('click', (event) => {
+//     event.preventDefault()
+
+// alert("entrou")
+
+//   // Obtém as informações salvas no localStorage
+//   let comandasLS = localStorage.getItem('comandas');
+
+
+//   // Se as informações não estiverem vazias
+//   if (comandasLS) {
+//     // Converte as informações para um array
+//     comandasLS = JSON.parse(comandasLS);
+  
+//   console.log(comandasLS)
+
+//     // Remove a última entrada do array
+//     comandasLS.pop();
+
+//   console.log("pós-pop")
+//   console.log(comandasLS)
+
+
+//     // Converte o array para uma string
+//     //comandasLS = JSON.stringify(comandasLS);
+
+//     // Salva as informações atualizadas no localStorage
+//     localStorage.setItem("comandas", comandasLS);
+
+//       console.log("pós-app")
+
+//   console.log(comandasLS)
+    
+//     }
+//     }
+//     )
