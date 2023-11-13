@@ -1,6 +1,6 @@
 // verificando Status do Usuario
 
-//let elementoSigin
+//let elementoSigin 
 
 let statusUser = localStorage.getItem("registro");
 
@@ -112,7 +112,6 @@ setTimeout(function() {
    
 }
 // registrando as comandas ///////////////
-
 //elementos
 
 let comandas = [];
@@ -186,45 +185,10 @@ function mostraComandas(mostraTodos = true) {
     
 }
 
-// const nComanda = document.getElementById("nComanda");
-// const id = document.getElementById("nComanda");
-// const nome = document.getElementById("nome")
-// const reserva = document.getElementById("reserva")
-// const lugar = document.getElementById("lugar")
-// const tel = document.getElementById("tel")
-// const obs = document.getElementById("Obs")
-
-// salva comandas
-
-
-// console.log("id" + (id.value==""));
-// console.log("nome" + (nome.value==""));
-// console.log("res" + (reserva.value==""));
-// console.log("lug" + (lugar.value==""));
-// console.log("tel" + (tel.value==""));
-
-const isEmpty = (id.value =="" && nome.value =="" && tel.value =="");
-
-console.log(isEmpty)
-console.log(!isEmpty)
 
 btnAdicionarComanda.addEventListener('click', () => {
 
-         
-    //   if(isEmpty){
-
-    //       swal({
-    //         title: "Atenção!!",
-    //         text: "Existem campos em branco. \n Por favor revise antes de continuar...",
-    //         icon: "warning",
-    //         dangerMode: true,
-    //         buttons: true,
-    //             });
-
-    // }else {
-
-
-
+ 
     if( document.getElementById("VIP").checked === true) {VIP = "VIP Ativo"} else { VIP = "VIP Inativo"}
     
     comandas.push({
@@ -238,7 +202,9 @@ btnAdicionarComanda.addEventListener('click', () => {
         obs : obs.value,
     })
 
-    localStorage.setItem('comandas', JSON.stringify(comandas))
+   
+      localStorage.setItem('comandas', JSON.stringify(comandas))
+
 
     swal({
             title: "Sucesso!!",
@@ -251,10 +217,9 @@ btnAdicionarComanda.addEventListener('click', () => {
             location.reload();  
             }, 750);
 //} // if do campo em branco
+
 }
 )
-
-
 
     //limpa todas as comandas
 
@@ -262,11 +227,12 @@ btnLimpaComanda.addEventListener('click', (event) => {
     event.preventDefault()
     
     localStorage.removeItem('comandas')
+       localStorage.removeItem('ocupadas')
 
 
     swal({
             title: "Atenção!!",
-            text: "Entradas apagadas!",
+            text: "Todas Comandas apagadas!",
             icon: "warning",
             button: false,
                 });
@@ -278,40 +244,37 @@ btnLimpaComanda.addEventListener('click', (event) => {
     }
     )
 
-  
-//     btnLimpaUltimoRegistro.addEventListener('click', (event) => {
-//     event.preventDefault()
+btnLimpaUltima.addEventListener('click', () => {
 
-// alert("entrou")
+    comandas.pop({
+        nComanda: nComanda.value,
+        id: id.value,
+        nome: nome.value,
+        reserva: reserva.value,
+        lugar: lugar.value,
+        telefone: tel.value,
+        VIP : VIP,
+        obs : obs.value,
+    })
 
-//   // Obtém as informações salvas no localStorage
-//   let comandasLS = localStorage.getItem('comandas');
-
-
-//   // Se as informações não estiverem vazias
-//   if (comandasLS) {
-//     // Converte as informações para um array
-//     comandasLS = JSON.parse(comandasLS);
-  
-//   console.log(comandasLS)
-
-//     // Remove a última entrada do array
-//     comandasLS.pop();
-
-//   console.log("pós-pop")
-//   console.log(comandasLS)
+   
+      localStorage.setItem('comandas', JSON.stringify(comandas))
 
 
-//     // Converte o array para uma string
-//     //comandasLS = JSON.stringify(comandasLS);
+    swal({
+            title: "Sucesso!!",
+            text: "Ultima Comanda apagada",
+            icon: "success",
+            button: false,
+            });
+        
+    setTimeout(function() {
+            location.reload();  
+            }, 750);
+//} // if do campo em branco
 
-//     // Salva as informações atualizadas no localStorage
-//     localStorage.setItem("comandas", comandasLS);
+}
+)
 
-//       console.log("pós-app")
 
-//   console.log(comandasLS)
-    
-//     }
-//     }
-//     )
+
