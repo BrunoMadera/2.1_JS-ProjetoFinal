@@ -1,19 +1,20 @@
+
 // verificando Status do Usuario
 
 //let elementoSigin 
 
 let statusUser = localStorage.getItem("registro");
-
-if(statusUser){console.log(statusUser)} else {elementoSigin.textContent  = "Sign-In"}
+if(statusUser){console.log(statusUser)} else {localStorage.setItem("registro", "Sign-In")}
 
 // final do verificando Status do Usuario
 
 // alterando o nome no elemento Sign-In
-   
+
+      
     let elementoSignin = document.getElementById("SigIn");
 
  
-    if(statusUser != "DESCONHECIDO"  )
+    if(statusUser !== "DESCONHECIDO"  )
         {
 
         elementoSignin.textContent  = "Bem-Vindo, "+ statusUser;
@@ -31,7 +32,7 @@ if(statusUser){console.log(statusUser)} else {elementoSigin.textContent  = "Sign
 
 function deslogar()
 {
-    localStorage.removeItem('registro');
+    localStorage.setItem("registro", "DESCONHECIDO");
         swal({
         title: "Atenção!",
         text: "Você foi desconectado",
@@ -60,6 +61,8 @@ function irParaHome(){
 function irParaMesas(){
 
    window.location.href = "MesasLayout.html"
+   verificaMesas();
+
 
 }
 
@@ -285,28 +288,105 @@ btnLimpaUltima.addEventListener('click', () => {
 }
 )
 
+
+
 function verificaMesas(){
+
 
     let ocupadasLS = JSON.parse(localStorage.getItem('ocupadas')) || []
 
     var IsSF1_occupied = ocupadasLS.find((i) => i === "Sofa#1");
     console.log(IsSF1_occupied);
+            if (IsSF1_occupied === "Sofa#1") {
+        console.log("entrou:"+true)
+        document.getElementById("sofa1").style.backgroundColor = "red";  
+        document.getElementById("sofa1").style.color = "white";   
+        }
 
     var IsSF2_occupied = ocupadasLS.find((i) => i === "Sofa#2");
     console.log(IsSF2_occupied);
+            if (IsSF2_occupied === "Sofa#2") {
+        console.log("entrou:"+true)
+        document.getElementById("sofa2").style.backgroundColor = "red";
+        document.getElementById("sofa2").style.color = "white";   
+    
+        }
 
     var IsSF3_occupied = ocupadasLS.find((i) => i === "Sofa#3");
     console.log(IsSF3_occupied);
+            if (IsSF3_occupied === "Sofa#3") {
+        console.log("entrou:"+true)
+        document.getElementById("sofa3").style.backgroundColor = "red";    
+        document.getElementById("sofa3").style.color = "white";   
+
+        }
+
 
     var IsM1_occupied = ocupadasLS.find((i) => i === "Mesa#1");
     console.log(IsM1_occupied);
+            if (IsM1_occupied === "Mesa#1") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa1").style.backgroundColor = "red";    
+        }
+
 
     var IsM2_occupied = ocupadasLS.find((i) => i === "Mesa#2");
     console.log(IsM2_occupied);
+                if (IsM2_occupied === "Mesa#2") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa2").style.backgroundColor = "red";    
+        }
+
 
     var IsM3_occupied = ocupadasLS.find((i) => i === "Mesa#3");
     console.log(IsM3_occupied);
+                if (IsM3_occupied === "Mesa#3") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa3").style.backgroundColor = "red";    
+        }
+
+    var IsSL1_occupied = ocupadasLS.find((i) => i === "Lounge#1");
+    console.log(IsSL1_occupied);
+            if (IsSL1_occupied === "Lounge#1") {
+        console.log("entrou:"+true)
+        document.getElementById("lounge1").style.backgroundColor = "red";  
+        document.getElementById("lounge1").style.color = "white";   
+        }
+
+    var IsSL2_occupied = ocupadasLS.find((i) => i === "Lounge#2");
+    console.log(IsSL2_occupied);
+            if (IsSL2_occupied === "Lounge#2") {
+        console.log("entrou:"+true)
+        document.getElementById("lounge2").style.backgroundColor = "red";  
+        document.getElementById("lounge2").style.color = "white";   
+        }
+
+    var IsM4_occupied = ocupadasLS.find((i) => i === "Mesa#4");
+    console.log(IsM4_occupied);
+                if (IsM4_occupied === "Mesa#4") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa4").style.backgroundColor = "red";    
+        }
+
+    var IsM5_occupied = ocupadasLS.find((i) => i === "Mesa#5");
+    console.log(IsM5_occupied);
+                if (IsM5_occupied === "Mesa#5") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa5").style.backgroundColor = "red";    
+        }
+
+    var IsM6_occupied = ocupadasLS.find((i) => i === "Mesa#6");
+    console.log(IsM6_occupied);
+                if (IsM6_occupied === "Mesa#6") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa6").style.backgroundColor = "red";    
+        }
+
+    var IsM7_occupied = ocupadasLS.find((i) => i === "Mesa#7");
+    console.log(IsM7_occupied);
+                if (IsM7_occupied === "Mesa#7") {
+        console.log("entrou:"+true)
+        document.getElementById("mesa7").style.backgroundColor = "red";    
+        }
 
 }
-
-verificaMesas();

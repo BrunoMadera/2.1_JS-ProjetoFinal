@@ -10,10 +10,9 @@
     
 <!-- CDN SweetAlert -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    
 
 </head>
-<body class ="fundoMesas">
+<body class ="fundoMesas" onload="verificaMesas()">
      <div class="box nav"> <!--barra superior -->
         <a class="txtNav pos1" href="#" >
             <img class="txtNav pos1" src="Assets/Images/logo-nobg.png" ></img>  
@@ -28,39 +27,42 @@
 <hr class="horizLineBlue">
 
 <!-- Inicio da Pagina -->
- 
     <!-- Area Jardim -->
 
     <div class="Tit1">Area do Salão
-    </div>
+        <div class="Tit3" style="margin-left: 35px;"> <i>Caso os locais estejam ocupados, estarão na cor vermelha...</i></div>
+    </div> 
 
     <div class="AreaSalao">
-    <div class="boxMesas a Tit3" style="background-color: #FFB703; color: black;">Sofa#1</div>
-    <div class="boxMesas b Tit3" style="background-color: #023047;">Sofa#2</div>
-    <div class="boxMesas c Tit3" style="background-color: #FFC300;color: black;">Sofa#3</div>
+    <div class="boxMesas a Tit3" id = "sofa1" >Sofa#1</div>
+    <div class="boxMesas b Tit3" id = "sofa2" >Sofa#2</div>
+    <div class="boxMesas c Tit3" id = "sofa3" >Sofa#3</div>
     <div class="boxMesas d"> 
-        <div class="boxMesas e Tit5">Mesa#1</div>
-        <div class="boxMesas f Tit5">Mesa#2</div>
-        <div class="boxMesas g Tit5">Mesa#3</div>
+        <div class="boxMesas e Tit5"  id = "mesa1" >Mesa#1</div>
+        <div class="boxMesas f Tit5"  id = "mesa2">Mesa#2</div>
+        <div class="boxMesas g Tit5"  id = "mesa3">Mesa#3</div>
     </div>
     </div>
 
 <hr class="horizLineRed">
 
-    <!-- Area Salao -->
+    <!-- Area Salao // style="background-color: #FFB703; color: black;" // style="background-color: #023047;" // style="background-color: #FFC300;color: black;"-->
   
     <div class="Tit1">Area do Jardim
+        <div class="Tit3" style="margin-left: 35px;"> <i>Caso os locais estejam ocupados, estarão na cor vermelha...</i></div>
+
     </div>
     <div class="AreaJardim">
-    <div class="boxMesas h Tit3" style="background-color: #FFC300;color: black;">Lounge#1</div>
-    <div class="boxMesas i Tit3" style="background-color: #023047;">Lounge#2</div>
+    <div class="boxMesas h Tit3" style="background-color: #FFC300;color: black;" id="lounge1">Lounge#1</div>
+    <div class="boxMesas i Tit3" style="background-color: #023047; color: white;" id="lounge2">Lounge#2</div>
     <div class="boxMesas k Tit3"> 
-        <div class="boxMesas l Tit5">Mesa#4</div>
-        <div class="boxMesas m Tit5">Mesa#5</div>
-        <div class="boxMesas n Tit5">Mesa#6</div>
-        <div class="boxMesas o Tit5">Mesa#7</div>
+        <div class="boxMesas l Tit5" id="mesa4">Mesa#4</div>
+        <div class="boxMesas m Tit5" id="mesa5">Mesa#5</div>
+        <div class="boxMesas n Tit5" id="mesa6">Mesa#6</div>
+        <div class="boxMesas o Tit5" id="mesa7">Mesa#7</div>
     </div>
     </div>
+
 
 
  <!-- Fim da Pagina -->
