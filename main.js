@@ -129,7 +129,7 @@ const obs = document.getElementById("Obs")
 
 
 let VIP = "";
-if( document.getElementById("VIP").checked === true) {VIP = "VIP Ativo"} else { VIP = "VIP Inativo"}
+if( document.getElementById("VIP") && document.getElementById("VIP").checked === true) {VIP = "VIP Ativo"} else { VIP = "VIP Inativo"}
 
 // array de comandas
 
