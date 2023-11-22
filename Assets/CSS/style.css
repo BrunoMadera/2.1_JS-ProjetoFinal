@@ -662,7 +662,7 @@ padding: 15px;
     ". log5 ."
     ". log1 ."
     ". log2 ."
-    ". log3 ."
+    ". log3 .";
   }
   
 .log0{  
@@ -702,5 +702,63 @@ padding: 15px;
 
         margin-top: 15px;
         margin-bottom: 15px;
+
+}
+
+
+.containerSobre{ 
+
+  display: grid; 
+
+  grid-template-columns: repeat (4, 1fr); 
+  grid-template-rows: repeat (3, 1fr); 
+
+  gap: 10px 10px; 
+
+  grid-template-areas: 
+    "sobre0 sobre0 sobre0 sobre0"
+    "sobre1 sobre1 sobre1 sobre1"
+    "sobre2 sobre4 sobre4 sobre3";
+
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center; 
+}
+
+  
+.boxSobre{  
+        display: grid;
+        /* border: solid 1px red; */
+}
+
+
+.sobre0{  
+        grid-area: sobre0;
+        /* border: solid 1px red; */
+
+}
+.sobre1{  
+        grid-area: sobre1;
+        /* border: solid 1px red; */
+        text-align: center;
+
+}
+
+.sobre2{  
+        grid-area: sobre2;
+        /* border: solid 1px red; */
+
+}
+
+.sobre3{  
+        grid-area: sobre3;
+        /* border: solid 1px red; */
+
+}
+
+.sobre4{  
+        grid-area: sobre4;
+        /* border: solid 1px red; */
 
 }
