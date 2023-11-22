@@ -761,3 +761,28 @@ padding: 15px;
         /* border: solid 1px red; */
 
 }
+
+
+.containerFooter {
+  display: grid; 
+  grid-template-columns: 1fr 1fr auto; 
+  grid-template-rows: 50px; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "quem texto help"; 
+}
+.quem {
+  justify-self: start; 
+  grid-area: quem; 
+}
+
+.texto{
+  justify-self: right; 
+  grid-area: texto; 
+}
+
+.help{
+  justify-self: end; 
+  grid-area: help; 
+  max-width: 25px;
+}
